@@ -11,7 +11,7 @@
    ╚═══╝   ╚═════╝    ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝ ╚══▀▀═╝
 ```
  
-###  AI-Powered Travel Intelligence Platform
+### AI-Powered Travel Intelligence Platform
  
 **Predict flights · Plan trips · Master your budget**
  
@@ -51,19 +51,19 @@ The platform uses machine learning to predict when flight prices are about to ri
  
 ---
  
-##  Features (Current)-----------New Incoming
+## Features (Current) — New Incoming
  
 | Feature | Description |
 |---|---|
-|  **Flight Prediction** | ML model predicts whether a fare will rise or fall — tells you the best time to book |
-|  **Smart Budget Planner** | Enter your total budget and get a category-by-category breakdown for any trip |
+| **Flight Prediction** | ML model predicts whether a fare will rise or fall — tells you the best time to book |
+| **Smart Budget Planner** | Enter your total budget and get a category-by-category breakdown for any trip |
 | **Trip Planner** | Drag-and-drop itinerary builder covering flights, hotels, food, and activities |
 | **AI Assistant** | Chat with GPT-4 to plan entire trips in natural language |
 | **Price Alerts** | Set a target fare and get notified the moment it drops |
  
 ---
  
-##  Tech Stack
+## Tech Stack
  
 ### Frontend
 | Tool | Purpose |
@@ -97,10 +97,7 @@ The platform uses machine learning to predict when flight prices are about to ri
  
 ---
  
-
-
- 
-##  Getting Started
+## Getting Started
  
 ### Prerequisites
  
@@ -108,75 +105,77 @@ Make sure you have these installed before starting:
  
 - **Node.js v20+** — [nodejs.org](https://nodejs.org)
 - **Git** — [git-scm.com](https://git-scm.com)
-- **Git Bash** (Windows only) — installed with Git above
 - **VS Code or PyCharm** — your code editor
 - **A Supabase account** — free PostgreSQL database at [supabase.com](https://supabase.com)
  
-### 1. Clone the Repository
+### 1. Fork the Repository
  
-```bash
+Click the **Fork** button at the top right of this page on GitHub.
+ 
+This creates your own copy of the repo under your GitHub account. You will be working from your fork, not the original.
+ 
+### 2. Clone Your Fork
+ 
+```powershell
 git clone https://github.com/YOUR-USERNAME/voyageiq.git
-cd VoyageIQ
+cd voyageiq
 ```
  
-### 2. Switch to the Dev Branch
+Replace `YOUR-USERNAME` with your actual GitHub username.
  
-```bash
+### 3. Switch to the Dev Branch
+ 
+```powershell
 git checkout dev
 ```
  
->  Always work on `dev` — never directly on `main`.
+> Always work on `dev` — never directly on `main`.
  
-### 3. Install All Dependencies
+### 4. Install All Dependencies
  
-```bash
-npm install all
+```powershell
+npm run install:all
 ```
  
 This installs packages for the root, frontend, and backend in one command.
  
-### 4. Set Up Environment Files
+### 5. Set Up Environment Files
  
-```bash
-# Backend
-cd backend && cp .env.example .env
- 
-# Frontend
-cd ../frontend && cp .env.local.example .env.local
+```powershell
+copy backend\.env.example backend\.env
+copy frontend\.env.local.example frontend\.env.local
 ```
  
-Open each file and fill in the values — ask the lead for real API keys.
+Open each file in VS Code and fill in the values — ask the lead for real API keys.
  
-### 5. Set Up the Database
+### 6. Set Up the Database
  
-```bash
+```powershell
 cd backend
 npx prisma migrate dev
+cd ..
 ```
  
-This creates all the database tables. You only need to run this once (and again if the schema changes).
+This creates all the database tables. Only needs to run once (and again if the schema changes).
  
-### 6. Start the Project
+### 7. Start the Project
  
-```bash
-# From the ROOT folder — starts both frontend AND backend together
-cd ..
+```powershell
 npm run dev
 ```
  
 | App | URL |
 |---|---|
-|  Frontend | http://localhost:3000 |
-|  Backend | http://localhost:4000 |
-|  Health check | http://localhost:4000/api/health |
+| Frontend | http://localhost:3000 |
+| Backend | http://localhost:4000 |
+| Health check | http://localhost:4000/api/health |
  
 ---
  
+## Running the Project
  
-## ▶️ Running the Project
- 
-```bash
-# Start BOTH apps at the same time (recommended)
+```powershell
+# Start both frontend and backend together (recommended)
 npm run dev
  
 # Start only the frontend
@@ -191,8 +190,7 @@ npm run install:all
  
 ---
  
- 
-##  API Reference
+## API Reference
  
 See **[API.md](./API.md)** for the full endpoint contract.
  
@@ -216,9 +214,9 @@ Quick overview:
  
 | App | Platform | Trigger |
 |---|---|---|
-|  Frontend | [Vercel](https://vercel.com) | Auto-deploys when `main` is updated |
+| Frontend | [Vercel](https://vercel.com) | Auto-deploys when `main` is updated |
 | Backend | [Render](https://render.com) | Auto-deploys when `main` is updated |
-|  Database | [Supabase](https://supabase.com) | Managed PostgreSQL — always on |
+| Database | [Supabase](https://supabase.com) | Managed PostgreSQL — always on |
  
 ### Deploy Settings
  
@@ -231,13 +229,13 @@ Quick overview:
 - Build Command: `npm install && npx prisma generate`
 - Start Command: `npm start`
  
->  Never push directly to `main`. Merge `dev` → `main` only when a version is stable and tested.
+> Never push directly to `main`. Merge `dev` → `main` only when a version is stable and tested.
  
 ---
  
 <div align="center">
  
-
+Made with ☕ by the VoyageIQ Team
  
 </div>
-
+ 
