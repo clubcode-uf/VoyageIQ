@@ -7,8 +7,9 @@ backend/node_modules/
 .env
 .env.local
 .env.production
-frontend/.env.local
+frontend/frontend.env
 backend/.env
+backend/backend.env
 
 # Build outputs
 .next/
@@ -26,3 +27,4 @@ Thumbs.db
 # Editor
 .vscode/
 *.swp
+
