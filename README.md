@@ -116,7 +116,7 @@ Make sure you have these installed before starting:
  
 ```bash
 git clone https://github.com/YOUR-USERNAME/voyageiq.git
-cd voyageiq
+cd VoyageIQ
 ```
  
 ### 2. Switch to the Dev Branch
